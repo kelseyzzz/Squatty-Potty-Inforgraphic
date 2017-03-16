@@ -13,27 +13,6 @@ TABLE OF CONTENTS:
 */
 
 
-@mixin breakpoint($class) {
-  @if $class == xs {
-    @media (max-width: 320px) { @content; }
-  }
- 
-  @else if $class == sm {
-    @media (min-width: 768px) { @content; }
-  }
- 
-  @else if $class == md {
-    @media (min-width: 992px) { @content; }
-  }
- 
-  @else if $class == lg {
-    @media (min-width: 1200px) { @content; }
-  }
- 
-  @else {
-    @warn "Breakpoint mixin supports: xs, sm, md, lg";
-  }
-
 
 
 
@@ -68,7 +47,7 @@ body {
 	font-family: sans-serif;
 	width: 90%;
 	max-width: 1000px;
-	height: 3770px;
+	height: 3293px;
 	margin: 30px auto;
 	border-radius: 10px;
 }
@@ -217,6 +196,7 @@ header{
 		}
 
 		.western {
+
 			
 
 			h3 {
@@ -225,10 +205,6 @@ header{
 				font-size: 400%;
 				margin-top: 5%;
 				margin-left: 21%;
-				@include breakpoint(xs) {
-				font-size: 2px;
-			   
-  				}
 			}
 
 			h4 {
@@ -297,6 +273,11 @@ header{
 	.crown-circle {
 		margin-top: 23%;
 		margin-left: 32%;
+
+		img {
+			width: 38%;
+			height: auto;
+		}
 	}
 }
 
@@ -519,6 +500,10 @@ header{
 			display: inline-block;
 			text-align: center;
 
+			img {
+				
+			}
+
 			h1 {
 				color: #fff301;
 
@@ -544,6 +529,8 @@ header{
 		img {
 			padding-left: 10%;
 			padding-top: 10%;
+			width: 50%;
+			height: auto;
 		}
 
 
@@ -612,6 +599,8 @@ footer{
 		display: inherit;
 		margin: 0 auto;
 		padding-top: 40px;
+		width: 43%;
+		height: auto;
 	}
 
 	.website {
@@ -642,17 +631,6 @@ footer{
 }
 
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
-
- 			.western h3 {
- 				font-size: 20%;
- 			}
- 		
- 	
- 
-
-}
 
 
 

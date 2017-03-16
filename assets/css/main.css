@@ -27,7 +27,7 @@ body {
   font-family: sans-serif;
   width: 90%;
   max-width: 1000px;
-  height: 3770px;
+  height: 3293px;
   margin: 30px auto;
   border-radius: 10px; }
 
@@ -128,7 +128,7 @@ header {
     margin-right: 12%; }
   .intro .yellow-word {
     width: 50px;
-    right: 25%;
+    right: 28%;
     top: 106%;
     line-height: 209%;
     position: absolute; }
@@ -154,6 +154,9 @@ header {
   .intro .crown-circle {
     margin-top: 23%;
     margin-left: 32%; }
+    .intro .crown-circle img {
+      width: 38%;
+      height: auto; }
 
 .middle {
   height: 1164px;
@@ -301,7 +304,9 @@ header {
   background: linear-gradient(to bottom, #22c4f2 0%, #0295d8 100%); }
   .end img {
     padding-left: 10%;
-    padding-top: 10%; }
+    padding-top: 10%;
+    width: 50%;
+    height: auto; }
   .end .header-end {
     height: 10%;
     background-color: yellow; }
@@ -342,7 +347,9 @@ footer {
   footer img {
     display: inherit;
     margin: 0 auto;
-    padding-top: 40px; }
+    padding-top: 40px;
+    width: 43%;
+    height: auto; }
   footer .website {
     text-transform: uppercase;
     color: #404042;
