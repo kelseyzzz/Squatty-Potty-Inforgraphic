@@ -16,6 +16,26 @@ TABLE OF CONTENTS:
 
 
 
+$breakpoints: ( "phone": 640px, 
+               	"tablet": 768px, 
+               	"desktop": 1024px) !default;
+
+@mixin respond-to($breakpoint) {
+ 
+  @if map-has-key($breakpoints, $breakpoint) {
+   
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+ 
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
 
 
 
@@ -47,7 +67,7 @@ body {
 	font-family: sans-serif;
 	width: 90%;
 	max-width: 1000px;
-	height: 3293px;
+	height: 3200px;
 	margin: 30px auto;
 	border-radius: 10px;
 }
@@ -205,6 +225,14 @@ header{
 				font-size: 400%;
 				margin-top: 5%;
 				margin-left: 21%;
+				@include respond-to("tablet") {
+					font-size: 315%;
+					margin-left: 2%;
+				}
+				@include respond-to("phone") {
+					font-size: 27px;
+					margin-left: -14%;
+				}
 			}
 
 			h4 {
@@ -273,11 +301,10 @@ header{
 	.crown-circle {
 		margin-top: 23%;
 		margin-left: 32%;
-
-		img {
-			width: 38%;
-			height: auto;
-		}
+		 img {
+		 	width: 38%;
+		 	height: auto;
+		 }
 	}
 }
 
@@ -500,10 +527,6 @@ header{
 			display: inline-block;
 			text-align: center;
 
-			img {
-				
-			}
-
 			h1 {
 				color: #fff301;
 
@@ -599,7 +622,7 @@ footer{
 		display: inherit;
 		margin: 0 auto;
 		padding-top: 40px;
-		width: 43%;
+		width: 40%;
 		height: auto;
 	}
 

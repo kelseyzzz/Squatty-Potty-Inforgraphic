@@ -27,7 +27,7 @@ body {
   font-family: sans-serif;
   width: 90%;
   max-width: 1000px;
-  height: 3293px;
+  height: 3200px;
   margin: 30px auto;
   border-radius: 10px; }
 
@@ -111,6 +111,14 @@ header {
     font-size: 400%;
     margin-top: 5%;
     margin-left: 21%; }
+    @media (max-width: 768px) {
+      .intro .beginning-sideways .western h3 {
+        font-size: 315%;
+        margin-left: 2%; } }
+    @media (max-width: 640px) {
+      .intro .beginning-sideways .western h3 {
+        font-size: 27px;
+        margin-left: -14%; } }
   .intro .beginning-sideways .western h4 {
     color: white;
     transform: rotateZ(-27deg);
@@ -348,7 +356,7 @@ footer {
     display: inherit;
     margin: 0 auto;
     padding-top: 40px;
-    width: 43%;
+    width: 40%;
     height: auto; }
   footer .website {
     text-transform: uppercase;
