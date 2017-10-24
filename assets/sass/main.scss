@@ -16,7 +16,7 @@ TABLE OF CONTENTS:
 
 
 
-$breakpoints: ( "phone": 640px, 
+$breakpoints: ( "phone": 440px, 
                	"tablet": 768px, 
                	"desktop": 1024px) !default;
 
@@ -95,6 +95,12 @@ header{
 	    box-shadow: 
 	        0 0 30px 0 rgba(0, 0, 0, 0.1), 
 	        0 36px 0 -18px #00adef;
+	    @include respond-to("tablet"){
+				font-size: 17px;
+			}
+		@include respond-to("tablet"){
+				font-size: 10px;
+			}
 	}
 
 	h1:before {
@@ -162,7 +168,14 @@ header{
 .beginning-left {
 	display: inline-block;
 	padding-top: 4%;
-	margin-left: 28%;	
+	margin-left: 28%;
+
+	@include respond-to("tablet"){
+				margin-left: 15%;
+			}
+	@include respond-to("phone"){
+				margin-left: -12%;
+			}	
 
 }
 
@@ -172,7 +185,9 @@ header{
 .beginning-right {
 	display: inline-block;
 	margin-left: 2%;
-
+	@include respond-to("phone"){
+				margin-left: 0%;
+			}
 	.beginning-words{
 	
 	}
@@ -182,6 +197,9 @@ header{
 		font-size: 19px;
 		text-transform: uppercase;
 		line-height: 123%;
+		@include respond-to("phone"){
+				font-size: 15px;
+			}
 	}
 
 	.sit-image {
@@ -213,6 +231,14 @@ header{
 			margin-left: 22%;
 			font-size: 151%;
 			margin-top: -5%;
+			@include respond-to("phone"){
+				        font-size: 16px;
+					    margin-left: -5%;
+					    width: 275px;
+					    margin-top: 5%;
+					}
+
+
 		}
 
 		.western {
@@ -225,13 +251,15 @@ header{
 				font-size: 400%;
 				margin-top: 5%;
 				margin-left: 21%;
+				text-transform: uppercase;
 				@include respond-to("tablet") {
 					font-size: 315%;
 					margin-left: 2%;
 				}
 				@include respond-to("phone") {
-					font-size: 27px;
-					margin-left: -14%;
+					font-size: 35px;
+				    margin-left: -14%;
+				    width: 400px;
 				}
 			}
 
@@ -241,6 +269,12 @@ header{
 				font-size: 400%;
 				margin-top: -3%;
 				margin-left: 32%;
+				text-transform: uppercase;
+				@include respond-to("phone") {
+					font-size: 34px;
+				    margin-left: 0%;
+				    width: 400px;
+				}
 
 			}
 		
@@ -257,6 +291,11 @@ header{
 					  float: right;
 					  margin-top: -10%;
 					  margin-right: 12%;
+					  @include respond-to("phone") {
+					    margin-right: -52px;
+
+					   
+				}
   
 				}
 
@@ -285,6 +324,12 @@ header{
   		position: absolute;
   		background: linear-gradient(to bottom, transparent 27%, #bcbdc1 27%, #bcbdc1 60%,  transparent 60%),
     	linear-gradient(to right, transparent 27%, #bcbdc1 27%, #bcbdc1 60%, transparent 60%);
+    	@include respond-to("phone") {
+					    top: 205%;
+					    right: 12%;
+
+					   
+		}
 
 	}
 	.plus-sign2 {
@@ -295,16 +340,31 @@ header{
   		top: 94%;
   		background: linear-gradient(to bottom, transparent 35%, #feffff 35%, #feffff 65%,  transparent 65%),
     	linear-gradient(to right, transparent 35%, #feffff 35%, #feffff 65%, transparent 65%);
-
+    	@include respond-to("phone") {
+					    top: 205%;
+					    right: 12%;
+					   
+		}
 	}
 
 	.crown-circle {
 		margin-top: 23%;
 		margin-left: 32%;
+		@include respond-to("phone") {
+			    margin-left: 26%;
+			    			   
+		}
 		 img {
 		 	width: 38%;
 		 	height: auto;
-		 }
+		 	@include respond-to("phone") {
+		 		width: 87%;
+				margin-top: -99%;
+				margin-left: -38%;			   
+			}			   
+		}
+
+		 
 	}
 }
 
@@ -319,6 +379,11 @@ header{
 		font-size: 6.7em;
 		color: #404042;
 		text-transform: uppercase;
+		@include respond-to("phone") {
+		 		    font-size: 2.7em;
+				    margin-left: -8%;
+				    margin-top: 20%;
+		}	
 	}
 
 	h2 {
@@ -326,6 +391,10 @@ header{
 		color: white;
 		padding-left: 9%;
 		font-family: Deftone;
+		@include respond-to("phone") {
+		 		    font-size: 2em;
+				    
+		}
 
 	}
 
@@ -334,6 +403,10 @@ header{
 		font-size: 7.9em;
 		text-transform: uppercase;
 		padding-left: 27%;
+		@include respond-to("phone") {
+		 		    font-size: 2.9em;
+		 		    padding-left: 34%;
+		}
 
 	}
 
@@ -343,21 +416,38 @@ header{
 				text-transform: uppercase;
 				font-size: 0.5em;
 				color: white;
+				@include respond-to("phone") {
+				    margin-left: -8%;
+				    font-size: 6px;
+				    margin-top: 3%;
+				}	
+				
+
 			}
 
 
 			.facts {
+				
 
 				h4 {
 					display: inline-block;
 					color: white;
 					font-size: 2em;
+					@include respond-to("phone") {
+		 		    	font-size: 16px;
+		 		    	margin-left: -22px;
+		 		    
+					}
 				}
 				h3 {
 					color: white;
 					display: inline-block;
 					font-size: 2em;
 					padding-left: 0; 
+					@include respond-to("phone") {
+		 		    	font-size: 20px;
+		 		
+					}
 
 				}
 			}
@@ -371,6 +461,10 @@ header{
 				border-bottom:4px solid white;
 				float: right;
 				display: inline-block;
+					@include respond-to("phone") {
+					    margin-right: -9%;
+					    margin-top: -9%;
+				}
 				}
 	
 	.row-facts{
@@ -385,6 +479,9 @@ header{
 				h1 {
 					font-size: 2.7em;
 					color: #414141;
+					@include respond-to("phone") {
+					    font-size: 15px;
+					}
 				}
 
 				h2{
@@ -393,6 +490,11 @@ header{
 					font-size: 1.4em;
 					padding-left: 0;
 					line-height: 30px;
+					@include respond-to("phone") {
+					    font-size: 10px;
+					    margin-left: -20px;
+					    line-height: 18px;
+					}
 				}
 
 				h3 {
@@ -400,6 +502,10 @@ header{
 					padding-left: 0;
 					font-family: Impact;
 					color: #414141;
+					@include respond-to("phone") {
+					    font-size: 10px;
+					    margin-left: -20px;
+					}
 				}
 
 			}
@@ -408,10 +514,20 @@ header{
 				width: 14%;
 				display: inline-block;
 				float: left;
+				@include respond-to("phone") {
+					    margin-left: -115px;
+					    width: 10%;
+					    
+					}
+
 
 				img {
 					padding-left: 20px;
-					padding-right: 20px
+					padding-right: 20px;
+					@include respond-to("phone") {
+					    width: 85px;
+					    
+					}
 				}
 				
 			}
@@ -435,6 +551,11 @@ header{
 					h1 {
 						color: #414141;
 						font-size: 2em;
+						@include respond-to("phone") {
+					    	font-size: 11px;
+					    	width: 166px;
+					    
+						}
 					}
 
 				}
@@ -449,6 +570,11 @@ header{
 						font-family: Helvetica;
 						float: left;
 						line-height: 52px;
+						@include respond-to("phone") {
+					    	font-size: 11px;
+					    	width: 166px;
+					    
+						}
 
 					}
 

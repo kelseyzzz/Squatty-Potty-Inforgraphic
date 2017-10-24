@@ -37,7 +37,7 @@ gulp.task('default', function() { // running `gulp` runs this task. this task so
     });
 
 	gulp.watch('./assets/sass/**/*.scss', ['sass']); // watch sass files. if they change, run the task called "sass"
-	gulp.watch('./assets/js/**/*.js', ['lint']); // watch js files. if they change, run the task called "lint"
+	//gulp.watch('./assets/js/**/*.js', ['lint']); // watch js files. if they change, run the task called "lint"
     gulp.watch("./**/*.html").on('change', browserSync.reload); // watch all top level files and reload if they change
     gulp.watch("./assets/**/*.*").on('change', browserSync.reload); // watch all assets and reload if they change
 });
